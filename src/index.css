@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --mc-blue: #2563eb;
+    --mc-blue-dark: #1d4ed8;
+    --mc-green: #16a34a;
+    --mc-green-dark: #15803d;
+    --mc-yellow: #eab308;
+    --mc-yellow-dark: #ca8a04;
+    --mc-charcoal: #18181b;
+    --mc-stone: #27272a;
+    --mc-border: #09090b;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f1f5f9;
+    color: #18181b;
+  }
+}
+
+/* Pixel / Block Craft styling */
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-silkscreen {
+  font-family: 'Silkscreen', monospace;
+}
+
+/* Blocky Minecraft-inspired Buttons */
+.mc-btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: 3px solid #0f172a;
+  box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.4), inset -2px -2px 0px rgba(0, 0, 0, 0.4), 3px 3px 0px #0f172a;
+  transition: all 0.05s ease-in-out;
+}
+
+.mc-btn-primary:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  transform: translate(1px, 1px);
+  box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.4), inset -2px -2px 0px rgba(0, 0, 0, 0.4), 2px 2px 0px #0f172a;
+}
+
+.mc-btn-primary:active:not(:disabled) {
+  transform: translate(3px, 3px);
+  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.4), inset -2px -2px 0px rgba(255, 255, 255, 0.4), 0px 0px 0px #0f172a;
+}
+
+.mc-btn-success {
+  background-color: #16a34a;
+  color: #ffffff;
+  border: 3px solid #052e16;
+  box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.4), inset -2px -2px 0px rgba(0, 0, 0, 0.4), 3px 3px 0px #052e16;
+  transition: all 0.05s ease-in-out;
+}
+
+.mc-btn-success:hover:not(:disabled) {
+  background-color: #15803d;
+  transform: translate(1px, 1px);
+  box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.4), inset -2px -2px 0px rgba(0, 0, 0, 0.4), 2px 2px 0px #052e16;
+}
+
+.mc-btn-success:active:not(:disabled) {
+  transform: translate(3px, 3px);
+  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.4), inset -2px -2px 0px rgba(255, 255, 255, 0.4), 0px 0px 0px #052e16;
+}
+
+.mc-btn-yellow {
+  background-color: #facc15;
+  color: #18181b;
+  border: 3px solid #422006;
+  box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.6), inset -2px -2px 0px rgba(0, 0, 0, 0.3), 3px 3px 0px #422006;
+  transition: all 0.05s ease-in-out;
+}
+
+.mc-btn-yellow:hover:not(:disabled) {
+  background-color: #eab308;
+  transform: translate(1px, 1px);
+  box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.6), inset -2px -2px 0px rgba(0, 0, 0, 0.3), 2px 2px 0px #422006;
+}
+
+.mc-btn-yellow:active:not(:disabled) {
+  transform: translate(3px, 3px);
+  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.4), inset -2px -2px 0px rgba(255, 255, 255, 0.4), 0px 0px 0px #422006;
+}
+
+.mc-btn-danger {
+  background-color: #dc2626;
+  color: #ffffff;
+  border: 3px solid #450a0a;
+  box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.4), inset -2px -2px 0px rgba(0, 0, 0, 0.4), 3px 3px 0px #450a0a;
+  transition: all 0.05s ease-in-out;
+}
+
+.mc-btn-danger:hover:not(:disabled) {
+  background-color: #b91c1c;
+  transform: translate(1px, 1px);
+  box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.4), inset -2px -2px 0px rgba(0, 0, 0, 0.4), 2px 2px 0px #450a0a;
+}
+
+.mc-btn-secondary {
+  background-color: #e2e8f0;
+  color: #0f172a;
+  border: 3px solid #1e293b;
+  box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.8), inset -2px -2px 0px rgba(0, 0, 0, 0.2), 3px 3px 0px #1e293b;
+  transition: all 0.05s ease-in-out;
+}
+
+.mc-btn-secondary:hover:not(:disabled) {
+  background-color: #cbd5e1;
+  transform: translate(1px, 1px);
+  box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.8), inset -2px -2px 0px rgba(0, 0, 0, 0.2), 2px 2px 0px #1e293b;
+}
+
+.mc-btn-secondary:active:not(:disabled) {
+  transform: translate(3px, 3px);
+  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.3), inset -2px -2px 0px rgba(255, 255, 255, 0.5), 0px 0px 0px #1e293b;
+}
+
+/* Blocky Minecraft-inspired Container / Card */
+.mc-card {
+  background-color: #ffffff;
+  border: 3px solid #0f172a;
+  box-shadow: 4px 4px 0px #0f172a;
+}
+
+.mc-card-sm {
+  background-color: #ffffff;
+  border: 2px solid #0f172a;
+  box-shadow: 3px 3px 0px #0f172a;
+}
+
+.mc-card-dark {
+  background-color: #18181b;
+  color: #f4f4f5;
+  border: 3px solid #09090b;
+  box-shadow: 4px 4px 0px #09090b;
+}
+
+/* Input Fields with Crisp Pixel Insets */
+.mc-input {
+  background-color: #f8fafc;
+  border: 3px solid #1e293b;
+  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.15);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.mc-input:focus {
+  background-color: #ffffff;
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: inset 2px 2px 0px rgba(37, 99, 235, 0.2), 0 0 0 2px #93c5fd;
+}
+
+/* Subtle pixel block background grid */
+.mc-pixel-bg {
+  background-color: #f1f5f9;
+  background-image: 
+    linear-gradient(45deg, #e2e8f0 25%, transparent 25%), 
+    linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #e2e8f0 75%), 
+    linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+  background-size: 32px 32px;
+  background-position: 0 0, 0 16px, 16px -16px, -16px 0px;
+}
+
+.mc-admin-bg {
+  background-color: #0f172a;
+  background-image: 
+    radial-gradient(#1e293b 2px, transparent 2px), 
+    radial-gradient(#1e293b 2px, #0f172a 2px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}

@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "submissions": {
+      "title": "Print Upload Sessions",
+      "description": "Customer upload sessions containing print files, timestamps, status, and metadata.",
+      "type": "object",
+      "properties": {
+        "uploadId": {
+          "type": "string",
+          "description": "System generated ID formatted like UPLOAD-YYYYMMDD-001"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO timestamp of upload"
+        },
+        "date": {
+          "type": "string",
+          "description": "Formatted date e.g. September 21, 2026"
+        },
+        "time": {
+          "type": "string",
+          "description": "Formatted time e.g. 10:42 AM"
+        },
+        "fileCount": {
+          "type": "number",
+          "description": "Total number of files in this session"
+        },
+        "totalSize": {
+          "type": "number",
+          "description": "Combined byte size of all files"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["NEW", "DOWNLOADED", "COMPLETED"],
+          "description": "Operational status in admin dashboard"
+        },
+        "files": {
+          "type": "array",
+          "description": "List of uploaded file items"
+        }
+      },
+      "required": ["uploadId", "createdAt", "date", "time", "fileCount", "totalSize", "status"]
+    }
+  },
+  "firestore": {
+    "/submissions/{submissionId}": {
+      "schema": "submissions",
+      "description": "Upload session document containing files and status"
+    }
+  }
+}

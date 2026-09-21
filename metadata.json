@@ -1,0 +1,8 @@
+{
+  "name": "Oyangoren Printing Services Upload Here:",
+  "description": "Customer file upload portal and Super Admin management dashboard for Oyangoren Printing Services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

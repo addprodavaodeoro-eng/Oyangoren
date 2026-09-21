@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /submissions/{submissionId} {
+      // Any customer can submit print jobs without entering personal information
+      allow create: if request.resource.data.uploadId is string;
+
+      // Only authenticated Super Admin staff can read, update status, or delete
+      allow read, update, delete: if request.auth != null;
+    }
+  }
+}
+

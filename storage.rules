@@ -1,0 +1,13 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /uploads/{allPaths=**} {
+      // Customers can upload directly to cloud storage (up to 2GB per file)
+      allow create, write: if request.resource.size < 2048 * 1024 * 1024;
+
+      // Only authenticated Super Admin staff can read, download, or delete uploaded files
+      allow read, delete: if request.auth != null;
+    }
+  }
+}
+
